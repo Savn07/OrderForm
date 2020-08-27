@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="icon" href="img/Aicon.ico">
+    <style>
+        .outer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px;
+            padding: 20px;
+        }
+
+        body {
+            background-color: #b2ebf2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bill {
+            border: 2px solid;
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="checkbox"],
+        textarea {
+            padding: 8px;
+            margin: 5px 0 22px 0;
+            border: solid 2px;
+            background: #f1f1f1;
+        }
+
+        input[type="text"]:focus,
+        input[type="checkbox"]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 140px;
+            text-align: right;
+        }
+
+
+        .imgpay {
+            height: 50px;
+            width: auto;
+        }
+
+        .registerbtn {
+            background-color: #fddb3a;
+            color: #ff4301;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.7;
+            font-size: 20px;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <form action="" method="get">
+            <h1>
+                <center>Order Information</center>
+            </h1>
+            <h3>You are almost done! Enter the below details to complete purchase.</h3>
+            <div class="bill">
+                <h3>Billing Address</h3>
+                <label>Name</label>
+                <input type="text" name="bname" size="30" placeholder="Enter Name" required> <br>
+                <label>Street</label>
+                <input type="text" name="bstreet" size="35" placeholder="Enter Street" required> <br>
+                <label>City</label>
+                <input type="text" name="bcity" size="30" placeholder="City" required> <br>
+                <label>State</label>
+                <input type="text" name="bstate" placeholder="State" required> <br>
+                <label>Zip</label>
+                <input type="text" name="bzip" size="15" placeholder="xxx-xxx" required> <br>
+            </div>
+
+            <br>
+
+            <div class="bill">
+                <h3>Shipping Address</h3>
+                <label>Name</label>
+                <input type="text" name="sname" size="30" placeholder="Enter Name" required> <br>
+                <label>Street</label>
+                <input type="text" name="sstreet" size="35" placeholder="Enter Street" required> <br>
+                <label>City</label>
+                <input type="text" name="scity" size="30" placeholder="City" required> <br>
+                <label>State</label>
+                <input type="text" name="sstate" placeholder="State" required> <br>
+                <label>Zip</label>
+                <input type="text" name="szip" size="15" placeholder="xxx-xxx" required> <br>
+            </div>
+
+            <br>
+
+            <div class="bill">
+                <h3>Contact Details</h3>
+                <label for="email">Email </label>
+                <input type="text" placeholder="Enter Email" name="email" size="45" required> <br>
+                <label>Phone no </label>
+                <input type="text" name="country code" placeholder="Country Code" value="+91" size="2">
+                <input type="text" name="phone" placeholder="Mobile no." size="20" required> <br>
+            </div>
+
+            <br>
+
+            <div>
+                <table style="border: solid 2px; padding: 10px;">
+                    <tr>
+                        <td>
+                            <b> Accepted Cards</b>
+                            <select name="cards" required>
+                                <option value="PayPal">Paypal</option>
+                                <option value="Mastercard">Mastercard</option>
+                                <option value="Visa">Visa</option>
+                            </select>
+                        </td>
+                        <td><img src="img/payment.png" class="imgpay" alt="Payment"></td>
+                    </tr>
+                    <tr>
+                        <td>Name on Card</td>
+                        <td><input type="text" style="border:solid 1px; padding: 10px; margin: 0;" name="cardname"
+                                placeholder="John more doe" required></td>
+                    </tr>
+                    <tr>
+                        <td>Card Number</td>
+                        <td><input type="text" style="border:solid 1px; padding: 10px; margin: 0;" name="cardnum"
+                                placeholder="0000-0000-0000-0000" required></td>
+                    </tr>
+                    <tr>
+                        <td>Expires on</td>
+                        <td><input type="text" style="border:solid 1px; padding: 10px; margin: 0;" name="month"
+                                placeholder="month" size=2 required>
+                            <input type="text" style="border:solid 1px; padding: 10px; margin: 0;" name="year"
+                                placeholder="year" size=4 required></td>
+                        <td>CCV</td>
+                        <td><input type="text" style="border:solid 1px; padding: 10px; margin: 0;" name="ccv"
+                                placeholder="ccv" size=3 required></td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+            <div class="signin">
+                <input type="checkbox" name="updates">Please keep
+                me informed about future product offerings.
+            </div>
+            <button type="submit" class="registerbtn">Submit</button>
+        </form>
+    </div>
+
+    <div style="background-color: #b2ebf2;">
+        <hr>
+        <div style="background-color: white; padding: 8px;">
+            <center>Savn © 2020 All rights reserved</center>
+        </div>
+        <hr>
+    </div>
+
+</body>
+</html>
